@@ -1,8 +1,5 @@
-from selenium import webdriver
 import time
-from selenium.common import NoAlertPresentException
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.alert import Alert
 from Home import filename, driver
 
 
@@ -24,11 +21,9 @@ time.sleep(1)
 # Assert that login button is present
 login_button = driver.find_element(By.CSS_SELECTOR, "button[type='submit']")
 assert login_button.is_displayed() and login_button.is_enabled(), "Login button is not present or enabled"
-time.sleep(2)
+time.sleep(1)
 login_button.click()
 print("Task 1 completed ✅")
 
 time.sleep(3)
-
-# Close the browser
 driver.quit()

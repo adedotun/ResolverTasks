@@ -10,6 +10,7 @@ driver.get(filename)
 
 # Find the div with id "test-5-div"
 test_5_div = driver.find_element(By.ID, "test-5-div")
+driver.execute_script("arguments[0].scrollIntoView(true);", test_5_div)
 
 # Wait for the button to be displayed
 button = WebDriverWait(driver, 100).until(EC.visibility_of_element_located((By.ID, "test5-button")))
@@ -22,8 +23,6 @@ assert success_message.text == "You clicked a button!", "Success message is not 
 # Assert that the button is disabled
 assert button.get_attribute("disabled") == "true", "Button is not disabled"
 print("Task 5 completed ✅")
-# Close the browser
-time.sleep(10)
 
-# Close the browser
+time.sleep(10)
 driver.quit()

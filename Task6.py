@@ -6,6 +6,7 @@ from Home import filename, driver
 def get_cell_value(row_index, column_index):
     # Locate the table element
     table = driver.find_element(By.CLASS_NAME, "table")
+    driver.execute_script("arguments[0].scrollIntoView(true);", table)
 
     # Find the cell at the specified row and column index
     cell_xpath = f"//tbody/tr[{row_index + 1}]/td[{column_index + 1}]"
@@ -24,8 +25,5 @@ cell_value = get_cell_value(2, 2)
 assert cell_value == "Ventosanzap", f"Cell value is not 'Ventosanzap', actual value: {cell_value}"
 print("Task 6 completed ✅")
 
-# Close the browser
 time.sleep(3)
-
-# Close the browser
 driver.quit()

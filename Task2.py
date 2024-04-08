@@ -31,8 +31,5 @@ badge_element = second_list_item.find_element(By.CLASS_NAME, "badge")
 assert badge_element.text.strip() == "6", "Second list item badge value is incorrect"
 print("Task 2 completed ✅")
 
-# Close the browser
 time.sleep(10)
-
-# Close the browser
 driver.quit()

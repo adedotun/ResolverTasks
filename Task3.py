@@ -8,6 +8,7 @@ driver.get(filename)
 
 # Find the div with id "test-3-div"
 test_3_div = driver.find_element(By.ID, "test-3-div")
+driver.execute_script("arguments[0].scrollIntoView(true);", test_3_div)
 
 # Assert that "Option 1" is the default selected value
 dropdown_button = test_3_div.find_element(By.ID, "dropdownMenuButton")
@@ -24,8 +25,5 @@ wait = WebDriverWait(driver, 10)
 wait.until(EC.text_to_be_present_in_element((By.ID, "dropdownMenuButton"), "Option 3"))
 print("Task 3 completed ✅")
 
-# Close the browser
 time.sleep(10)
-
-# Close the browser
 driver.quit()
