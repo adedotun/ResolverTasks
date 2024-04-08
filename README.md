@@ -7,7 +7,7 @@ This project demonstrates various tasks solved using Selenium in Python, serving
 1. **Clone the Repository:**  
    Clone this repository to your local machine using the following command:
    ```
-   https://github.com/adedotun/ResolverTasks/edit/main/README.md)
+   git clone https://github.com/adedotun/ResolverTasks.git
    ```
    
 2. **Navigate to Project Directory:**  
