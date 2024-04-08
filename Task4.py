@@ -1,10 +1,7 @@
 import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from Task1 import filename
-
-
-driver = webdriver.Chrome()
+from Home import filename, driver
 
 driver.get(filename)
 
@@ -20,7 +17,7 @@ second_button = test_4_div.find_element(By.XPATH, "//button[2]")
 assert not second_button.is_enabled(), "Second button is not disabled"
 print("Task 4 completed ✅")
 # Close the browser
-time.sleep(10)
+time.sleep(4)
 
 # Close the browser
 driver.quit()

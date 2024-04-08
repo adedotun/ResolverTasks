@@ -1,14 +1,9 @@
 import time
 
-from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-
-from Task1 import filename
-
-# Initialize the WebDriver (assuming Chrome WebDriver is used)
-driver = webdriver.Chrome()
+from Home import filename, driver
 
 # Navigate to the page containing the HTML
 driver.get(filename)
@@ -17,7 +12,7 @@ driver.get(filename)
 test_5_div = driver.find_element(By.ID, "test-5-div")
 
 # Wait for the button to be displayed
-button = WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.ID, "test5-button")))
+button = WebDriverWait(driver, 100).until(EC.visibility_of_element_located((By.ID, "test5-button")))
 button.click()
 
 # Assert that a success message is displayed

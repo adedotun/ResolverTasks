@@ -1,9 +1,6 @@
 import time
-
-from selenium import webdriver
 from selenium.webdriver.common.by import By
-
-from Task1 import filename
+from Home import filename, driver
 
 
 def get_cell_value(row_index, column_index):
@@ -18,7 +15,6 @@ def get_cell_value(row_index, column_index):
     return cell.text
 
 
-driver = webdriver.Chrome()
 driver.get(filename)
 
 # Find the value of the cell at coordinates (2, 2)
@@ -29,7 +25,7 @@ assert cell_value == "Ventosanzap", f"Cell value is not 'Ventosanzap', actual va
 print("Task 6 completed ✅")
 
 # Close the browser
-time.sleep(10)
+time.sleep(3)
 
 # Close the browser
 driver.quit()
